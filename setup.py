@@ -1,4 +1,4 @@
-# Copyright 2023 The OpenXLA Authors
+# Copyright 2023 The SHARK Authors
 #
 # Licensed under the Apache License v2.0 with LLVM Exceptions.
 # See https://llvm.org/LICENSE.txt for license information.
@@ -31,11 +31,10 @@ PACKAGE_SUFFIX = version_info.get("package-suffix") or ""
 PACKAGE_VERSION = version_info.get("package-version") or "0.0dev1"
 
 setup(
-    name=f"openxla-devtools{PACKAGE_SUFFIX}",
+    name=f"shark-devtools{PACKAGE_SUFFIX}",
     version=f"{PACKAGE_VERSION}",
-    author="OpenXLA Authors",
-    author_email="iree-discuss@googlegroups.com",
-    description="OpenXLA Development Tools",
+    author="Stella Laurenzo",
+    description="SHARK Development Tools",
     long_description=README,
     long_description_content_type="text/markdown",
     license="Apache-2.0",
@@ -43,16 +42,16 @@ setup(
         "License :: OSI Approved :: Apache Software License",
         "Programming Language :: Python :: 3",
     ],
-    url="https://github.com/openxla/iree",
+    url="https://github.com/nod-ai/SHARK-devtools",
     python_requires=">=3.8",
     zip_safe=True,
     packages=find_namespace_packages(include=[
-        "openxla.devtools",
-        "openxla.devtools.*",
+        "shark_devtools",
+        "shark_devtools.*",
     ]),
     entry_points={
         "console_scripts": [
-            "openxla-workspace = openxla.devtools.workspace.__main__:main"
+            "shark-ws = shark_devtools.workspace.__main__:main"
         ],
     },
     install_requires=[],
