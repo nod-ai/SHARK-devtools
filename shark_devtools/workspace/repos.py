@@ -36,8 +36,8 @@ types.RepoInfo(
 )
 types.RepoInfo(
     name="torch-mlir",
-    ro_url="https://github.com/llvm/torch-mlir.git",
-    rw_url="git@github.com:llvm/torch-mlir.git",
+    ro_url="https://github.com/nod-ai/torch-mlir.git",
+    rw_url="git@github.com:nod-ai/torch-mlir.git",
     deps=[],
 )
 
